@@ -26,77 +26,245 @@
     />
     <!-- tailwind-config -->
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                headingColor:'#131318',
-                buttonColor:'#FF4240',
-                SubtextColor:'#13131899',
-                textColor:'#424247'
-              },
-              fontFamily:{
-                'manRope':['Manrope','sans-serif']
-              }
-            }
-          }
-        }
-      </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              headingColor: "#131318",
+              buttonColor: "#FF4240",
+              SubtextColor: "#13131899",
+              textColor: "#424247",
+            },
+            fontFamily: {
+              manRope: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="max-w-[1440px] mx-auto font-manRope">
     <!-- headerArea-start -->
     <header>
-        <!-- navArea-start -->
-        <div class="navbar bg-base-100 w-[1170px] mx-auto h-[100px]">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
+      <!-- navArea-start -->
+      <div class="navbar bg-base-100 w-[1170px] mx-auto h-[100px]">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
                 </ul>
-              </div>
-              <h1 class="text-4xl font-extrabold text-headingColor">
-                Hockey <span class="text-4xl font-extrabold text-buttonColor tracking-[-13px]">’</span> s
-              </h1>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <h1 class="text-4xl font-extrabold text-headingColor">
+            Hockey
+            <span
+              class="text-4xl font-extrabold text-buttonColor tracking-[-13px]"
+              >’</span
+            >
+            s
+          </h1>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a
+                href="#home"
+                class="capitalize text-textColor text-base font-normal"
+                >home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="capitalize text-textColor text-base font-normal"
+                >about</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pages"
+                class="capitalize text-textColor text-base font-normal"
+                >pages</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="capitalize text-textColor text-base font-normal"
+                >blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="capitalize text-textColor text-base font-normal"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="pr-6">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a
+            class="btn px-6 py-6 capitalize bg-buttonColor text-white content-center text-xl font-bold"
+            >get ticket</a
+          >
+        </div>
+      </div>
+      <!-- navArea-finish -->
+      <!-- bannerArea-start -->
+      <section class="mt-[54px]">
+      <div class="w-[1170px] mx-auto">
+        <div class="carousel w-full h-[550px] rounded-2xl">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./resource/image/1.png" class="w-full" />
+            <div
+              class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+            >
+              <a
+                href="#slide4"
+                class="btn btn-circle bg-headingColor text-white mr-4 ml-8"
+                >❮</a
+              >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-headingColor text-white"
+                >❯</a
+              >
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a href="#home" class="capitalize text-textColor text-base font-normal">home</a></li>
-                <li><a href="#about" class="capitalize text-textColor text-base font-normal">about</a></li>
-                <li><a href="#pages" class="capitalize text-textColor text-base font-normal">pages</a></li>
-                <li><a href="#blog" class="capitalize text-textColor text-base font-normal">blog</a></li>
-                <li><a href="#contact" class="capitalize text-textColor text-base font-normal">contact</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-                <a class="pr-6">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-              <a class="btn px-6 py-6 capitalize bg-buttonColor text-white content-center text-xl font-bold">get ticket</a>
+            <div
+              class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+            >
+              <h2 class="text-2xl font-extrabold mb-4">
+                Meet all the heroes from the field
+              </h2>
+              <p>
+                Renowned for excellence, our hockey club dominates with
+                unmatched skill, teamwork, and passion. Join us for a thrilling
+                journey towards victory and unparalleled sportsmanship.
+              </p>
             </div>
           </div>
-        <!-- navArea-finish -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./resource/image/banner1.jpg" class="w-full" />
+            <div
+              class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+            >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-headingColor text-white mr-4 ml-8"
+                >❮</a
+              >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-headingColor text-white"
+                >❯</a
+              >
+            </div>
+            <div
+              class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+            >
+              <h2 class="text-2xl font-extrabold mb-4">
+                Unleashing Greatness on the Hockey Arena
+              </h2>
+              <p>
+                As a premier hockey club, we redefine greatness with dedication, camaraderie, and a relentless pursuit of triumph on the ice.
+              </p>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./resource/image/banner2.jpg" class="w-full" />
+            <div
+              class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+            >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-headingColor text-white mr-4 ml-8"
+                >❮</a
+              >
+              <a
+                href="#slide4"
+                class="btn btn-circle bg-headingColor text-white"
+                >❯</a
+              >
+            </div>
+            <div
+              class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+            >
+              <h2 class="text-2xl font-extrabold mb-4">
+                Elevating the Game, Redefining Victory
+              </h2>
+              <p>
+                Your exceptional skills and determination are elevating the game, redefining victory. A true force on the hockey arena!
+              </p>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./resource/image/banner3.jpg" class="w-full" />
+            <div
+              class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+            >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-headingColor text-white mr-4 ml-8"
+                >❮</a
+              >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-headingColor text-white"
+                >❯</a
+              >
+            </div>
+            <div
+              class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+            >
+              <h2 class="text-2xl font-extrabold mb-4">
+                Triumph Unleashed
+              </h2>
+              <p>
+                With each match, you epitomize excellence, elevating the game and rewriting the narrative of triumph with every victorious moment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- bannerArea-finish -->
     </header>
     <!-- headerArea-finish -->
     <!-- mainArea-start -->
-    <main>
-
-    </main>
+    <main></main>
     <!-- mainArea-finish -->
     <!-- footerArea-start -->
-    <footer>
-
-    </footer>
+    <footer></footer>
     <!-- footerArea-finish -->
   </body>
 </html>
