@@ -38,6 +38,9 @@
             fontFamily: {
               manRope: ["Manrope", "sans-serif"],
             },
+            screens:{
+              'small':{'min':'0px','max':'640px'}
+            }
           },
         },
       };
@@ -45,12 +48,12 @@
   </head>
   <body class="max-w-[1440px] mx-auto font-manRope">
     <!-- headerArea-start -->
-    <header>
+    <header class="hidden">
       <!-- navArea-start -->
-      <div class="navbar bg-base-100 w-[1170px] mx-auto h-[100px]">
+      <div class="navbar bg-base-100 w-[1170px] mx-auto h-[100px] small:w-[520px]">
         <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <div class="dropdown top-[15px]">
+            <div tabindex="0" role="button" class="btn btn-ghost hidden small:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -68,17 +71,48 @@
             </div>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg shadow-black bg-base-100 rounded-box w-52"
             >
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
+            <li>
+              <a
+                href="#home"
+                class="capitalize text-textColor text-base font-normal"
+                >home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="capitalize text-textColor text-base font-normal"
+                >about</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pages"
+                class="capitalize text-textColor text-base font-normal"
+                >pages</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="capitalize text-textColor text-base font-normal"
+                >blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="capitalize text-textColor text-base font-normal"
+                >contact</a
+              >
+            </li>
+            <li>
+              <a class="pr-6">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
             </ul>
           </div>
           <h1 class="text-4xl font-extrabold text-headingColor">
@@ -90,7 +124,7 @@
             s
           </h1>
         </div>
-        <div class="navbar-center hidden lg:flex">
+        <div class="navbar-center hidden lg:flex small:hidden">
           <ul class="menu menu-horizontal px-1">
             <li>
               <a
@@ -130,7 +164,7 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="pr-6">
+          <a class="pr-6 small:hidden">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
           <a
@@ -143,13 +177,13 @@
       <!-- bannerArea-start -->
       <section class="mt-[54px]">
         <div
-          class="w-[1170px] mx-auto after:content-'' after:table after:w-full after:h-[1px] after:border after:border-dashed after:border-textColor after:mt-[100px] after:opacity-30"
+          class="w-[1170px] mx-auto after:content-'' after:table after:w-full after:h-[1px] after:border after:border-dashed after:border-textColor after:mt-[10px] after:opacity-30 small:w-[520px]"
         >
           <div class="carousel w-full h-[550px] rounded-2xl">
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src="./resource/image/1.png" class="w-full" />
+            <div id="slide1" class="carousel-item relative w-full small:h-full">
+              <img src="./resource/image/1.png" class="w-full small:absolute small:h-[263px] small:object-cover" />
               <div
-                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%] small:justify-center small:top-[42%] small:right-[45px]"
               >
                 <a
                   href="#slide4"
@@ -163,7 +197,7 @@
                 >
               </div>
               <div
-                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px] small:bottom-[75px] small:right-0 small:w-auto"
               >
                 <h2 class="text-2xl font-extrabold mb-4">
                   Meet all the heroes from the field
@@ -176,10 +210,10 @@
                 </p>
               </div>
             </div>
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="./resource/image/banner1.jpg" class="w-full" />
+            <div id="slide2" class="carousel-item relative w-full small:h-full">
+              <img src="./resource/image/banner1.jpg" class="w-full small:absolute small:h-[263px] small:object-cover" />
               <div
-                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%] small:justify-center small:top-[42%] small:right-[45px]"
               >
                 <a
                   href="#slide1"
@@ -193,10 +227,10 @@
                 >
               </div>
               <div
-                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px] small:bottom-[75px] small:right-0 small:w-auto"
               >
                 <h2 class="text-2xl font-extrabold mb-4">
-                  Unleashing Greatness on the Hockey Arena
+                  Hockey greatness.
                 </h2>
                 <p>
                   As a premier hockey club, we redefine greatness with
@@ -205,10 +239,10 @@
                 </p>
               </div>
             </div>
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="./resource/image/banner2.jpg" class="w-full" />
+            <div id="slide3" class="carousel-item relative w-full small:h-full">
+              <img src="./resource/image/banner2.jpg" class="w-full small:absolute small:h-[263px] small:object-cover" />
               <div
-                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%] small:justify-center small:top-[42%] small:right-[45px]"
               >
                 <a
                   href="#slide2"
@@ -222,7 +256,7 @@
                 >
               </div>
               <div
-                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px] small:bottom-[75px] small:right-0 small:w-auto"
               >
                 <h2 class="text-2xl font-extrabold mb-4">
                   Elevating the Game, Redefining Victory
@@ -233,10 +267,10 @@
                 </p>
               </div>
             </div>
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="./resource/image/banner3.jpg" class="w-full" />
+            <div id="slide4" class="carousel-item relative w-full small:h-full">
+              <img src="./resource/image/banner3.jpg" class="w-full small:absolute small:h-[263px] small:object-cover" />
               <div
-                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%]"
+                class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[85%] small:justify-center small:top-[42%] small:right-[45px]"
               >
                 <a
                   href="#slide3"
@@ -250,9 +284,11 @@
                 >
               </div>
               <div
-                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px]"
+                class="absolute w-[556px] bg-headingColor text-white px-8 py-8 rounded-2xl right-[32px] bottom-[32px] small:bottom-[75px] small:right-0 small:w-auto"
               >
-                <h2 class="text-2xl font-extrabold mb-4">Triumph Unleashed</h2>
+                <h2 class="text-2xl font-extrabold mb-4">
+                  Triumph Unleashed
+                </h2>
                 <p>
                   With each match, you epitomize excellence, elevating the game
                   and rewriting the narrative of triumph with every victorious
@@ -398,7 +434,7 @@
       </section>
       <!-- aboutArea-finish -->
       <!-- blogArea-start -->
-      <section id="blog" class="mt-8">
+      <section id="blog" class="mt-8 hidden">
         <div
           class="w-[1170px] mx-auto after:content-'' after:table after:w-full after:h-[1px] after:border after:border-dashed after:border-textColor after:mt-[32px] after:opacity-30"
         >
@@ -504,7 +540,7 @@
       </section>
       <!-- blogArea-finish -->
       <!-- productArea-start -->
-      <section id="pages" class="mt-8">
+      <section id="pages" class="mt-8 hidden">
         <div class="w-[1170px] mx-auto after:content-'' after:table after:w-full after:h-[1px] after:border after:border-dashed after:border-textColor after:mt-[32px] after:opacity-30">
             <div class="w-[607px] mx-auto text-center">
                 <h2 class="text-headingColor text-4xl font-extrabold capitalize">our new product</h2>
@@ -791,7 +827,7 @@
       </section>
       <!-- questionArea-finish -->
       <!-- contactArea-start -->
-      <section id="contact" class="mt-8">
+      <section id="contact" class="mt-8 hidden">
         <div class="w-[1170px] mx-auto after:content-'' after:table after:w-full after:h-[1px] after:border after:border-dashed after:border-textColor after:mt-[32px] after:opacity-30">
           <div class="w-[607px] mx-auto text-center">
             <h2 class="text-4xl font-extrabold text-headingColor mb-6">Get In Touch</h2>
@@ -909,7 +945,7 @@
     </main>
     <!-- mainArea-finish -->
     <!-- footerArea-start -->
-    <footer>
+    <footer class="hidden">
       <section class="bg-[#353b48] mt-[100px]">
         <div class="w-[1170px] mx-auto py-[100px]">
           <div class="grid grid-cols-[346px_666px] gap-x-[158px]">
